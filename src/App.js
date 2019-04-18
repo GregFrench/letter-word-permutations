@@ -1,11 +1,11 @@
-// 3, 4, 5, 6, 7 letter words
-// smallest word to largest word
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import permutations from 'permutation';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 class App extends Component {
 
@@ -125,17 +125,20 @@ class App extends Component {
       <div className="App">
         <div className="container">
           <h1>Letter Permutations to Words</h1>
-          <Form className="text-center" inline onSubmit={this.handleSubmit}>
-            {this.createForm()}
-            <div className="submit-area">
-              <Form.Group>
-                <Button variant="success" onClick={this.handleSubmit}>Submit</Button>
-              </Form.Group>
-            </div>
-          </Form>
+          <Row>
+            <Col>
+              <Form className="text-center" inline onSubmit={this.handleSubmit}>
+                {this.createForm()}
+                <Form.Group>
+                  <Button variant="success" onClick={this.handleSubmit}>Submit</Button>
+                </Form.Group>
+              </Form>
+            </Col>
+            <Col>
+              {this.state.words.map((item,i) => <li key={i}>{item}</li>)}
+            </Col>
+          </Row>
         </div>
-
-        {this.state.words.map((item,i) => <li key={i}>{item}</li>)}
       </div>
     );
   }
