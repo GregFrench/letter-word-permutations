@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/letter-word-permutations/precache-manifest.cb085b8a5ce72d3f17a5d2f64e30afaf.js"
+  "/letter-word-permutations/precache-manifest.97839594ffcdc47c2716447e0c7e553a.js"
 );
 
 workbox.clientsClaim();
