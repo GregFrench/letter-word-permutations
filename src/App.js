@@ -151,7 +151,7 @@ class App extends Component {
           </Form>
         </div>
 
-        {this.state.words.map((item,i) => <li key={i}>{item}</li>)}
+        {this.state.words.map((item,i) => <Row key={i}><Col>{item}</Col></Row>)}
       </div>
     );
   }
