@@ -20,12 +20,27 @@ class App extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.resetLetters = this.resetLetters.bind(this);
   }
 
   handleChange(event, index) {
     let letters = [...this.state.letters];
     letters[index] = event.target.value;
+
+    letters = letters.map(function(x){ return x.toLowerCase() })
+
     this.setState({letters});
+
+    //if (event.keyCode === 13) {
+      const form = event.target.form;
+      const index2 = Array.prototype.indexOf.call(form, event.target);
+      form.elements[index2 + 1].focus();
+      event.preventDefault();
+    //}
+  }
+
+  resetLetters() {
+    this.setState({letters: ["", "", "", "", "", "", ""], words: []});
   }
 
   handleSubmit(event) {
@@ -127,11 +142,12 @@ class App extends Component {
           <h1>Letter Permutations to Words</h1>
           <Form className="text-center" inline onSubmit={this.handleSubmit}>
             {this.createForm()}
-            <div className="submit-area">
               <Form.Group>
-                <Button variant="success" onClick={this.handleSubmit}>Submit</Button>
+                <Button className="button" variant="success" onClick={this.handleSubmit}>Submit</Button>
               </Form.Group>
-            </div>
+              <Form.Group>
+                <Button variant="danger" onClick={this.resetLetters}>Reset</Button>
+              </Form.Group>
           </Form>
         </div>
 

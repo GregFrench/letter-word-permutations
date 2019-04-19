@@ -9,6 +9,11 @@ html, body {
   text-align: center;
 }
 
+.button {
+  margin-right: 10px;
+  text-align: center;
+}
+
 .input {
   margin-right: 10px;
   text-align: center;
