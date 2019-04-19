@@ -139,7 +139,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="container">
-          <h1>Letter Permutationss to Words</h1>
+          <h1>Letter Permutations to Words</h1>
           <Form className="text-center" inline onSubmit={this.handleSubmit}>
             {this.createForm()}
               <Form.Group>
