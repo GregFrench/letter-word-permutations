@@ -137,11 +137,19 @@ class App extends Component {
     return form
   }
 
+  createRow = (item, i) => {
+    return (
+      <Row key={i}><Col>{item}</Col></Row>
+    )
+  }
+
   render() {
     return (
       <div className="App">
         <div className="container">
-          <h1>Letter Permutations to Words</h1>
+          <header>
+            <h1>Letter Permutations to Words</h1>
+          </header>
           <Form className="text-center" inline onSubmit={this.handleSubmit}>
             {this.createForm()}
               <Form.Group>
@@ -153,7 +161,12 @@ class App extends Component {
           </Form>
         </div>
 
-        {this.state.words.map((item,i) => <Row key={i}><Col>{item}</Col></Row>)}
+        {
+          this.state.words.map((item,i) => {
+            return (
+              this.createRow(item, i)
+            )
+          })}
       </div>
     );
   }

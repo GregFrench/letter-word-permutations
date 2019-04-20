@@ -2,6 +2,10 @@ html, body {
   background-color: #6abf69;
 }
 
+header {
+  margin-bottom: 50px;
+}
+
 .App {
   background-color: #6abf69;
   height: 100%;
