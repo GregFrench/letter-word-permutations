@@ -111,6 +111,10 @@ class App extends Component {
       }
     }
 
+    words.sort(function(a, b) {
+      return a.length - b.length || a.localeCompare(b)
+    })
+
     this.setState({words});
   }
 
