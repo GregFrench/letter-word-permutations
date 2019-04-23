@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "347f6ca37b84b0607af2",
+    "revision": "702f819dfddf4fc4e9e3",
     "url": "/letter-word-permutations/static/css/main.dc4fff9a.chunk.css"
   },
   {
-    "revision": "347f6ca37b84b0607af2",
-    "url": "/letter-word-permutations/static/js/main.d01423cb.chunk.js"
+    "revision": "702f819dfddf4fc4e9e3",
+    "url": "/letter-word-permutations/static/js/main.803fe77f.chunk.js"
   },
   {
     "revision": "b5f00294394d82598b63",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/letter-word-permutations/static/js/2.7e3a6438.chunk.js"
   },
   {
-    "revision": "8095ebb08f6fccbd968e932e26dfd5cc",
+    "revision": "429a41d1348432e791f81e01b3515212",
     "url": "/letter-word-permutations/index.html"
   }
 ];
