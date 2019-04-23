@@ -62,6 +62,22 @@ class App extends Component {
 
     // get all permutations of the word in terms of 3, 4, 5, 6, and 7 letters
     for (let i = 0; i < len; i++) {
+      res = perms[i].substring(0, 1);
+
+      if (!letterPermutations.includes(res)) {
+        letterPermutations.push(res)
+      }
+    }
+
+    for (let i = 0; i < len; i++) {
+      res = perms[i].substring(0, 2);
+
+      if (!letterPermutations.includes(res)) {
+        letterPermutations.push(res)
+      }
+    }
+
+    for (let i = 0; i < len; i++) {
       res = perms[i].substring(0, 3);
 
       if (!letterPermutations.includes(res)) {
