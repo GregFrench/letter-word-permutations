@@ -61,60 +61,21 @@ class App extends Component {
     let len = perms.length
 
     // get all permutations of the word in terms of 3, 4, 5, 6, and 7 letters
-    for (let i = 0; i < len; i++) {
-      res = perms[i].substring(0, 1);
+    let count = 0
+    let end = 3
+    for (let i = 0; i < (len * 5); i++) {
+      if (count === (len - 1)) {
+        end += 1
+        count = 0
+      }
+
+      res = perms[count].substring(0, end);
 
       if (!letterPermutations.includes(res)) {
         letterPermutations.push(res)
       }
-    }
 
-    for (let i = 0; i < len; i++) {
-      res = perms[i].substring(0, 2);
-
-      if (!letterPermutations.includes(res)) {
-        letterPermutations.push(res)
-      }
-    }
-
-    for (let i = 0; i < len; i++) {
-      res = perms[i].substring(0, 3);
-
-      if (!letterPermutations.includes(res)) {
-        letterPermutations.push(res)
-      }
-    }
-
-    for (let i = 0; i < len; i++) {
-      res = perms[i].substring(0, 4);
-
-      if (!letterPermutations.includes(res)) {
-        letterPermutations.push(res)
-      }
-    }
-
-    for (let i = 0; i < len; i++) {
-      res = perms[i].substring(0, 5);
-
-      if (!letterPermutations.includes(res)) {
-        letterPermutations.push(res)
-      }
-    }
-
-    for (let i = 0; i < len; i++) {
-      res = perms[i].substring(0, 6);
-
-      if (!letterPermutations.includes(res)) {
-        letterPermutations.push(res)
-      }
-    }
-
-    for (let i = 0; i < len; i++) {
-      res = perms[i].substring(0, 7);
-
-      if (!letterPermutations.includes(res)) {
-        letterPermutations.push(res)
-      }
+      count += 1
     }
 
     console.log(letterPermutations)
