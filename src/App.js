@@ -69,6 +69,10 @@ class App extends Component {
         count = 0
       }
 
+      if (typeof perms[count] === 'undefined') {
+        break
+      }
+
       res = perms[count].substring(0, end);
 
       if (!letterPermutations.includes(res)) {
