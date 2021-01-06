@@ -82,8 +82,6 @@ class App extends Component {
       count += 1
     }
 
-    console.log(letterPermutations)
-
     for (let i = 0; i < letterPermutations.length; i++) {
       if (this.state.dictionary.hasOwnProperty(letterPermutations[i])) {
         if (!words.includes(letterPermutations[i])) {
@@ -115,7 +113,7 @@ class App extends Component {
 
     for (let i = 0; i < 7; i++) {
       form.push(<Form.Group key={i}>
-        <Form.Control className="input" type="text" name="letter[]" size="lg" size="1" maxLength="1" value={this.state.letters[i]} onChange={(event) => this.handleChange(event, i)} />
+        <Form.Control className="input" type="text" name="letter[]" size="1" maxLength="1" value={this.state.letters[i]} onChange={(event) => this.handleChange(event, i)} />
       </Form.Group>)
     }
 
