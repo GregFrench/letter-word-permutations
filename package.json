@@ -9,9 +9,8 @@
     "gh-pages": "2.0.1",
     "permutation": "0.0.1",
     "react": "16.8.6",
-    "react-bootstrap": "1.0.0-beta.8",
-    "react-dom": "16.8.6",
-    "reactstrap": "8.0.0"
+    "react-bootstrap": "1.3.0",
+    "react-dom": "16.8.6"
   },
   "devDependencies": {
     "react-scripts": "2.1.8"
